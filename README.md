@@ -1,1 +1,1 @@
-# javascript_sayi_tahmin_oyunu
+JS_Number-Guessing-Game
