@@ -5,34 +5,34 @@ console.log(generateNumber);
 // bu kontrol için commentli değil
 
 
-let tahminSayisi = window.prompt ( 'Sayıyı tahmin etmek için kaç tahmin hakkı istersiniz ?' );
+let tahminSayisi = window.prompt ( 'How many guesses do you want to guess the number ?' );
 tahminSayisi = parseInt(tahminSayisi);
 
 let tahmin;
 tahmin = parseInt(tahmin);
 
 if ( tahminSayisi <= 0 || isNaN(tahminSayisi) == 1 ) {
-     window.alert( `Lütfen " 0 " dan BÜYÜK bir SAYI giriniz...` );
+     window.alert( `Please enter a number greater than 0 ...` );
 
 } else {
-    tahmin = window.prompt ( 'Bulmanız gereken sayı " 0 ile 20 " arasındadır. Lütfen sayıyı tahmin ediniz' );
+    tahmin = window.prompt ( 'The number you need to find is between 0 and 20. Please guess the number' );
 }
 
 
 for ( let i = 1; i <= tahminSayisi; i++) {
 
     if ( tahmin != generateNumber && i == tahminSayisi ) {
-        window.alert( `Malesef sayıyı bilemediniz! DOĞRU SAYI : ${generateNumber}` ); 
+        window.alert( `Unfortunately you didn't know! CORRECT NUMBER : ${generateNumber}` ); 
         document.getElementById("result").innerHTML = "<img src='images/sadsmiley.jpg'>";
 
     } else if ( tahmin > generateNumber ) {
-         tahmin = window.prompt ( 'Daha küçük bir sayı giriniz' );
+         tahmin = window.prompt ( 'Please enter a smaller number' );
 
     } else if (tahmin < generateNumber) {
-         tahmin = window.prompt ( 'Daha BÜYÜK bir sayı giriniz' ); 
+         tahmin = window.prompt ( 'Please enter a LARGER number' ); 
 
     } else { ( tahmin == generateNumber ) ;
-         window.alert( `Tebrikler...Sayıyı ${i} denemede doğru tahmin ettiniz...` );
+         window.alert( `Congratulations... You guessed the number in ${i} tries...` );
          document.getElementById("result").innerHTML = "<img src='images/smiley.jpg'>"; 
         break;
     }
